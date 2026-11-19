@@ -1,26 +1,250 @@
+
 @import "tailwindcss";
 
+/* Variante para activar el modo oscuro mediante .dark */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ==========================================
+   TEMA CLARO
+========================================== */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
+
+  /* Fondos */
+  --fondo: oklch(0.985 0.003 250);
+  --fondo-secundario: oklch(0.96 0.008 250);
+  --fondo-terciario: oklch(0.93 0.012 250);
+
+  /* Superficies */
+  --superficie: oklch(1 0 0);
+  --superficie-secundaria: oklch(0.975 0.004 250);
+  --superficie-elevada: oklch(1 0 0);
+
+  /* Textos */
+  --texto: oklch(0.22 0.025 255);
+  --texto-secundario: oklch(0.45 0.02 255);
+  --texto-terciario: oklch(0.60 0.015 255);
+  --texto-invertido: oklch(0.99 0 0);
+
+  /* Color principal */
+  --primario: oklch(0.52 0.17 255);
+  --primario-hover: oklch(0.46 0.18 255);
+  --primario-suave: oklch(0.93 0.045 255);
+  --primario-texto: oklch(0.99 0 0);
+
+  /* Color secundario */
+  --secundario: oklch(0.91 0.015 250);
+  --secundario-hover: oklch(0.86 0.02 250);
+  --secundario-texto: oklch(0.28 0.025 255);
+
+  /* Color de acento */
+  --acento: oklch(0.72 0.14 190);
+  --acento-hover: oklch(0.65 0.15 190);
+  --acento-suave: oklch(0.94 0.045 190);
+  --acento-texto: oklch(0.20 0.04 210);
+
+  /* Estados */
+  --exito: oklch(0.62 0.16 150);
+  --exito-suave: oklch(0.94 0.045 150);
+
+  --advertencia: oklch(0.75 0.16 80);
+  --advertencia-suave: oklch(0.96 0.06 85);
+
+  --peligro: oklch(0.58 0.22 25);
+  --peligro-suave: oklch(0.94 0.045 25);
+
+  --informacion: oklch(0.62 0.15 235);
+  --informacion-suave: oklch(0.94 0.04 235);
+
+  /* Bordes y controles */
+  --borde: oklch(0.89 0.012 250);
+  --borde-secundario: oklch(0.93 0.008 250);
+  --entrada: oklch(0.89 0.012 250);
+  --anillo: oklch(0.58 0.17 255);
+
+  /* Componentes */
+  --superficie-tarjeta: oklch(1 0 0);
+  --superficie-emergente: oklch(1 0 0);
+
+  /* Barra lateral */
+  --barra-lateral: oklch(0.97 0.008 250);
+  --barra-lateral-texto: oklch(0.25 0.025 255);
+  --barra-lateral-primario: oklch(0.52 0.17 255);
+  --barra-lateral-acento: oklch(0.92 0.025 250);
+  --barra-lateral-borde: oklch(0.89 0.012 250);
+
+  /* Gráficos */
+  --grafico-1: oklch(0.58 0.19 255);
+  --grafico-2: oklch(0.68 0.15 185);
+  --grafico-3: oklch(0.68 0.16 145);
+  --grafico-4: oklch(0.76 0.16 80);
+  --grafico-5: oklch(0.64 0.20 320);
+
+  /* Sombras */
+  --sombra: 0 4px 20px oklch(0.2 0.02 255 / 0.06);
 }
+
+/* ==========================================
+   TEMA OSCURO
+========================================== */
+
+.dark {
+  color-scheme: dark;
+
+  /* Fondos */
+  --fondo: oklch(0.16 0.018 255);
+  --fondo-secundario: oklch(0.19 0.02 255);
+  --fondo-terciario: oklch(0.23 0.022 255);
+
+  /* Superficies */
+  --superficie: oklch(0.205 0.02 255);
+  --superficie-secundaria: oklch(0.23 0.022 255);
+  --superficie-elevada: oklch(0.26 0.025 255);
+
+  /* Textos */
+  --texto: oklch(0.96 0.008 250);
+  --texto-secundario: oklch(0.75 0.015 250);
+  --texto-terciario: oklch(0.58 0.015 250);
+  --texto-invertido: oklch(0.16 0.018 255);
+
+  /* Color principal */
+  --primario: oklch(0.70 0.15 255);
+  --primario-hover: oklch(0.76 0.14 255);
+  --primario-suave: oklch(0.29 0.07 255);
+  --primario-texto: oklch(0.16 0.025 255);
+
+  /* Color secundario */
+  --secundario: oklch(0.29 0.025 255);
+  --secundario-hover: oklch(0.34 0.025 255);
+  --secundario-texto: oklch(0.93 0.008 250);
+
+  /* Color de acento */
+  --acento: oklch(0.76 0.13 190);
+  --acento-hover: oklch(0.82 0.12 190);
+  --acento-suave: oklch(0.28 0.06 195);
+  --acento-texto: oklch(0.16 0.025 210);
+
+  /* Estados */
+  --exito: oklch(0.74 0.15 150);
+  --exito-suave: oklch(0.28 0.065 150);
+
+  --advertencia: oklch(0.82 0.15 85);
+  --advertencia-suave: oklch(0.30 0.065 85);
+
+  --peligro: oklch(0.70 0.19 25);
+  --peligro-suave: oklch(0.29 0.075 25);
+
+  --informacion: oklch(0.74 0.13 235);
+  --informacion-suave: oklch(0.28 0.06 235);
+
+  /* Bordes y controles */
+  --borde: oklch(0.34 0.022 255);
+  --borde-secundario: oklch(0.28 0.02 255);
+  --entrada: oklch(0.34 0.022 255);
+  --anillo: oklch(0.70 0.15 255);
+
+  /* Componentes */
+  --superficie-tarjeta: oklch(0.205 0.02 255);
+  --superficie-emergente: oklch(0.23 0.022 255);
+
+  /* Barra lateral */
+  --barra-lateral: oklch(0.18 0.02 255);
+  --barra-lateral-texto: oklch(0.93 0.008 250);
+  --barra-lateral-primario: oklch(0.70 0.15 255);
+  --barra-lateral-acento: oklch(0.27 0.025 255);
+  --barra-lateral-borde: oklch(0.30 0.02 255);
+
+  /* Gráficos */
+  --grafico-1: oklch(0.70 0.15 255);
+  --grafico-2: oklch(0.76 0.13 185);
+  --grafico-3: oklch(0.76 0.14 145);
+  --grafico-4: oklch(0.82 0.15 85);
+  --grafico-5: oklch(0.74 0.17 320);
+
+  /* Sombras */
+  --sombra: 0 4px 24px oklch(0 0 0 / 0.25);
+}
+
+/* ==========================================
+   TAILWIND CSS 4
+========================================== */
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Fondos */
+  --color-fondo: var(--fondo);
+  --color-fondo-secundario: var(--fondo-secundario);
+  --color-fondo-terciario: var(--fondo-terciario);
+
+  /* Superficies */
+  --color-superficie: var(--superficie);
+  --color-superficie-secundaria: var(--superficie-secundaria);
+  --color-superficie-elevada: var(--superficie-elevada);
+  --color-tarjeta: var(--superficie-tarjeta);
+  --color-emergente: var(--superficie-emergente);
+
+  /* Textos */
+  --color-texto: var(--texto);
+  --color-texto-secundario: var(--texto-secundario);
+  --color-texto-terciario: var(--texto-terciario);
+  --color-texto-invertido: var(--texto-invertido);
+
+  /* Colores principales */
+  --color-primario: var(--primario);
+  --color-primario-hover: var(--primario-hover);
+  --color-primario-suave: var(--primario-suave);
+  --color-primario-texto: var(--primario-texto);
+
+  --color-secundario: var(--secundario);
+  --color-secundario-hover: var(--secundario-hover);
+  --color-secundario-texto: var(--secundario-texto);
+
+  --color-acento: var(--acento);
+  --color-acento-hover: var(--acento-hover);
+  --color-acento-suave: var(--acento-suave);
+  --color-acento-texto: var(--acento-texto);
+
+  /* Estados */
+  --color-exito: var(--exito);
+  --color-exito-suave: var(--exito-suave);
+
+  --color-advertencia: var(--advertencia);
+  --color-advertencia-suave: var(--advertencia-suave);
+
+  --color-peligro: var(--peligro);
+  --color-peligro-suave: var(--peligro-suave);
+
+  --color-informacion: var(--informacion);
+  --color-informacion-suave: var(--informacion-suave);
+
+  /* Bordes y controles */
+  --color-borde: var(--borde);
+  --color-borde-secundario: var(--borde-secundario);
+  --color-entrada: var(--entrada);
+  --color-anillo: var(--anillo);
+
+  /* Barra lateral */
+  --color-barra-lateral: var(--barra-lateral);
+  --color-barra-lateral-texto: var(--barra-lateral-texto);
+  --color-barra-lateral-primario: var(--barra-lateral-primario);
+  --color-barra-lateral-acento: var(--barra-lateral-acento);
+  --color-barra-lateral-borde: var(--barra-lateral-borde);
+
+  /* Gráficos */
+  --color-grafico-1: var(--grafico-1);
+  --color-grafico-2: var(--grafico-2);
+  --color-grafico-3: var(--grafico-3);
+  --color-grafico-4: var(--grafico-4);
+  --color-grafico-5: var(--grafico-5);
+
+  /* Tipografía y radios */
+  --font-sans: Arial, Helvetica, sans-serif;
+
+  --radius-sm: 0.375rem;
+  --radius-md: 0.625rem;
+  --radius-lg: 0.875rem;
+  --radius-xl: 1.125rem;
+  --radius-2xl: 1.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
