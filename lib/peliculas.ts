@@ -1,6 +1,6 @@
 
-import  prisma  from '@/lib/prisma'
 import type { Pelicula } from '@prisma/client'
+import prisma from './prisma'
 
 // Devuelve todas las películas: primero las pendientes y después las vistas.
 // Dentro de cada grupo, muestra primero las más recientes.
