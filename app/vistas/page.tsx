@@ -1,6 +1,6 @@
 
 import type { Metadata } from 'next'
-import { ListaPeliculas } from '@/components/ListaPeliculas'
+import  ListaPeliculas  from '@/components/ListaPeliculas'
 import { obtenerPeliculasVistas } from '@/lib/peliculas'
 
 export const dynamic = 'force-dynamic'
